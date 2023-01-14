@@ -1,0 +1,7 @@
+[init]
+	defaultBranch = main
+[user]
+	name = Måns Sterner Boström
+	email = mans.sterner@gmail.com
+[core]
+	editor = vim

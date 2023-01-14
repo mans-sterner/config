@@ -1,0 +1,11 @@
+# Base16 Shell
+BASE16_SHELL_PATH="$HOME/.config/base16-shell"
+[ -n "$PS1" ] && \
+	  [ -s "$BASE16_SHELL_PATH/profile_helper.sh" ] && \
+	      source "$BASE16_SHELL_PATH/profile_helper.sh"
+
+function PWD {
+  pwd | awk -F\/ '{print $(NF-2),$(NF-1),$(NF)}' | sed "s/ /\\//g"
+}
+
+PS1="\[\e[31m\]\: \[\e[32m\]\$(PWD) \[\e[1;37m\]-> \[\e[0;33m\]"
